@@ -1,0 +1,21 @@
+button {
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}
+
+button.clear-canvas {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: lightBlue;
+    @include flexCenter;
+    cursor: pointer;
+    box-shadow: 0 2px 40px rgba(0, 0, 0, .3);
+}
