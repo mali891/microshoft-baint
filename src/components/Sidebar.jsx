@@ -12,7 +12,12 @@ export default class Sidebar extends React.Component {
 				<div className="sidebar-section">
 					<h3>Tools</h3>
 					<hr />
-					<ToolSelection activeTool={this.props.activeTool} setActiveTool={this.props.setActiveTool} />
+					<ToolSelection
+						hue={this.props.hue}
+						activeTool={this.props.activeTool}
+						setActiveTool={this.props.setActiveTool}
+						setHue={this.props.setHue}
+					/>
 				</div>
 				<div className="sidebar-section">
 					<h3>Colour</h3>

@@ -31,6 +31,7 @@ export default class App extends Component {
                 <Canvas 
                     hue={this.state.hue} 
                     lineWidth={this.state.lineWidth}
+                    activeTool={this.state.activeTool}
                 />
             </React.Fragment>
         );

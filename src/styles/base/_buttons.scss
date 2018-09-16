@@ -83,4 +83,14 @@ button.tool-select {
             }
         }
     }
+
+    &.disabled {
+        cursor: not-allowed;
+
+        svg {
+            path {
+                fill: $black;
+            }
+        }
+    }
 }
