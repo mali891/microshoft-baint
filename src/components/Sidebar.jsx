@@ -6,6 +6,8 @@ export default class Sidebar extends React.Component {
 
 	setLineWidth = lineWidth => this.props.setLineWidth(lineWidth);
 
+	setCanvasBackground = canvasBackground => this.props.setCanvasBackground(canvasBackground);
+
 	render() {
 		return (
 			<aside>
@@ -40,6 +42,24 @@ export default class Sidebar extends React.Component {
 							type="text"
 							value={this.props.lineWidth}
 							onChange={e => this.setLineWidth(e.target.value)}
+						/>
+					</div>
+				</div>
+				<div className="sidebar-section">
+					<h3>Canvas background</h3>
+					<hr />
+					<div className="background-buttons">
+						<button
+							className={`background-select background-light${
+								this.props.canvasBackground === 'light' ? ' active' : ''
+							}`}
+							onClick={() => this.setCanvasBackground('light')}
+						/>
+						<button
+							className={`background-select background-dark${
+								this.props.canvasBackground === 'dark' ? ' active' : ''
+							}`}
+							onClick={() => this.setCanvasBackground('dark')}
 						/>
 					</div>
 				</div>

@@ -23,16 +23,16 @@ export default class Canvas extends React.Component {
 		ctx.lineTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY);
 		ctx.stroke();
 		ctx.strokeStyle = '';
+		ctx.lineWidth = this.props.lineWidth;
 
 		if (this.props.activeTool === 'brush') {
 			ctx.lineJoin = 'round';
 			ctx.lineCap = 'round';
-		} else if (this.props.activeTool === 'marker') {
+		} else {
 			ctx.lineJoin = 'miter';
 			ctx.lineCap = 'square';
 		}
 
-		ctx.lineWidth = this.props.lineWidth;
 		this.setState({
 			lastX: e.nativeEvent.offsetX,
 			lastY: e.nativeEvent.offsetY,
@@ -66,6 +66,7 @@ export default class Canvas extends React.Component {
 		return (
 			<React.Fragment>
 				<canvas
+					className={`${this.props.canvasBackground === 'dark' ? 'dark' : ''}`}
 					width={window.innerWidth - 250}
 					height={window.innerHeight}
 					ref="canvas"

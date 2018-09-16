@@ -7,6 +7,7 @@ aside {
     width: 250px;
     background-color: $dark;
     padding: 4rem 2rem;
+    border-right: 1px solid $white;
 
     .sidebar-section {
         &:not(:last-of-type) {
@@ -14,9 +15,10 @@ aside {
         }
     }
 
-    .stroke-inputs {
+    .stroke-inputs,
+    .background-buttons {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 }

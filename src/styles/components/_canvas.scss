@@ -1,4 +1,11 @@
 canvas {
     margin-left: 250px;
     cursor: crosshair;
+    height: calc(100vh + 30px);
+    margin-top: -15px;
+    @include transition;
+
+    &.dark {
+        background-color: $dark;
+    }
 }
