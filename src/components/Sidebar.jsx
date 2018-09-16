@@ -14,7 +14,7 @@ export default class Sidebar extends React.Component {
 				<div className="sidebar-section">
 					<h3>Stroke</h3>
 					<hr />
-					<input type="color" />
+					<input type="range" min="1" max="100" step="1" />
 				</div>
 				<div className="sidebar-section">
 					<h3>Erase</h3>

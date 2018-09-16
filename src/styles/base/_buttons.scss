@@ -4,6 +4,10 @@ button {
     &:active {
         outline: none;
     }
+
+    svg {
+        height: 40%;
+    }
 }
 
 button.clear-canvas {
@@ -14,8 +18,21 @@ button.clear-canvas {
     right: 30px;
     border-radius: 50%;
     border: none;
-    background-color: lightBlue;
+    background-color: $white;
     @include flexCenter;
+    @include transition;
     cursor: pointer;
     box-shadow: 0 2px 40px rgba(0, 0, 0, .3);
+
+    svg {
+        path {
+            fill: $danger;
+        }
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    }
 }
