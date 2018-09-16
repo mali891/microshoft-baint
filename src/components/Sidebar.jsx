@@ -1,4 +1,5 @@
 import React from 'react';
+import ToolSelection from './ToolSelection';
 
 export default class Sidebar extends React.Component {
 	setHue = hue => this.props.setHue(hue);
@@ -11,6 +12,7 @@ export default class Sidebar extends React.Component {
 				<div className="sidebar-section">
 					<h3>Tools</h3>
 					<hr />
+					<ToolSelection activeTool={this.props.activeTool} setActiveTool={this.props.setActiveTool} />
 				</div>
 				<div className="sidebar-section">
 					<h3>Colour</h3>
