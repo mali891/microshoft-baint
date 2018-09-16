@@ -23,6 +23,9 @@ button.clear-canvas {
     @include transition;
     cursor: pointer;
     box-shadow: 0 2px 40px rgba(0, 0, 0, .3);
+    opacity: 0;
+    transform: scale(.7);
+    animation: fadeInScale 300ms cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards 1;
 
     svg {
         path {

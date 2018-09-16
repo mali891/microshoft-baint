@@ -13,4 +13,10 @@ aside {
             margin-bottom: 4rem;
         }
     }
+
+    .stroke-inputs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }

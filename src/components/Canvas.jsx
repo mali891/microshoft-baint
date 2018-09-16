@@ -25,7 +25,7 @@ export default class Canvas extends React.Component {
 		ctx.strokeStyle = '';
 		ctx.lineJoin = 'round';
 		ctx.lineCap = 'round';
-		ctx.lineWidth = 20;
+		ctx.lineWidth = this.props.lineWidth;
 		this.setState({
 			lastX: e.nativeEvent.offsetX,
 			lastY: e.nativeEvent.offsetY,
@@ -67,7 +67,7 @@ export default class Canvas extends React.Component {
 					onMouseUp={() => this.setState({ isDrawing: false })}
 					onMouseOut={() => this.setState({ isDrawing: false })}
 				/>
-				<ClearButton clearCanvas={this.clearCanvas}>Clear</ClearButton>
+				{this.state.lastX > 0 && <ClearButton clearCanvas={this.clearCanvas}>Clear</ClearButton>}
 			</React.Fragment>
 		);
 	}
