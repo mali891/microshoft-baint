@@ -4,7 +4,7 @@ import Canvas from './components/Canvas';
 
 export default class App extends Component {
     state = {
-        hue: '',
+        hue: '#41CAB4',
         lineWidth: 20,
         activeTool: 'brush'
     }
